@@ -1,4 +1,3 @@
-'''
 # mute plugin by lukeroge and neersighted
 from util import hook
 
@@ -25,7 +24,7 @@ def is_muted(chan, db):
         db.commit()
         return False
 
-#@hook.sieve
+@hook.sieve
 def mutesieve(bot, input, func, kind, args, db):
     if kind == "event":
         return input
@@ -66,4 +65,3 @@ def unmute(inp, input=None, db=None):
            input.notice("Muted")
     else:
         input.notice("Only bot admins can use this command!")
-'''
